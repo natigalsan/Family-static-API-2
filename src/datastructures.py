@@ -48,10 +48,6 @@ class FamilyStructure:
 
     def delete_member(self, id):
         # fill this method and update the return:
-        # for i, item in enumerate(self._members, start= 0):
-        #     if self._members[i]["id"] == id:
-        #         self._members.pop(i)
-        #         return None
         status = False
         for i, item in enumerate(self._members, start=0):
             if item["id"] == id:
