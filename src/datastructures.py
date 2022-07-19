@@ -14,27 +14,27 @@ class FamilyStructure:
 
         # example list of members
         self._members = [         
-        #  {
-        #         "id": self._generateId(),
-        #         "first_name": "John",
-        #         "last_name": "Jackson",
-        #         "age": "33 Years old",
-        #         "Lucky Numbers": [7, 13, 22]
-        #     },
-        #     {
-        #         "id": self._generateId(),
-        #         "first_name": "Jane",
-        #         "last_name":  "Jackson",
-        #         "age": "35 Years old",
-        #         "Lucky Numbers": [10, 14, 3]
-        #     },
-        #     {
-        #         "id": self._generateId(),
-        #         "first_name": "Jimmy",
-        #         "last_name":  "Jackson",
-        #         "age": "5 Years old",
-        #         "Lucky Numbers": [1]
-        #     }
+         {
+                "id": self._generateId(),
+                "first_name": "John",
+                "last_name": "Jackson",
+                "age": "33 Years old",
+                "Lucky Numbers": [7, 13, 22]
+            },
+            {
+                "id": self._generateId(),
+                "first_name": "Jane",
+                "last_name":  "Jackson",
+                "age": "35 Years old",
+                "Lucky Numbers": [10, 14, 3]
+            },
+            {
+                "id": self._generateId(),
+                "first_name": "Jimmy",
+                "last_name":  "Jackson",
+                "age": "5 Years old",
+                "Lucky Numbers": [1]
+            }
         ]
 
     # read-only: Use this method to generate random members ID's when adding members into the list
@@ -48,10 +48,15 @@ class FamilyStructure:
 
     def delete_member(self, id):
         # fill this method and update the return:
-        for i, item in enumerate(self._members, start= 0):
-            if self._members[i]["id"] == id:
+        # for i, item in enumerate(self._members, start= 0):
+        #     if self._members[i]["id"] == id:
+        #         self._members.pop(i)
+        #         return None
+        status = False
+        for i, item in enumerate(self._members, start=0):
+            if item["id"] == id:
                 self._members.pop(i)
-                return None
+                status = True
 
     def get_member(self, id):
         # fill this method and update the return --> con loops 
